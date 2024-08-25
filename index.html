@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calcular Aumento</title>
+</head>
+<body>
+    <h1>Calculadora de Aumento</h1>
+    <input type="number" id="Valor Inicial" placeholder="Insira o valor Inicial">
+    <input type="number" id="Porcentagem" placeholder="Insiar o Valor a aumentar">
+    
+    <button id="Calcular" onclick="calcular()">Calcular</button>
+
+    <p>O novo valor é de: <span id="media"></span></p>
+    <p id="status"></p>
+
+    <script>
+        function calcular() {
+            var n1 = parseFloat(document.getElementById('Valor Inicial').value);
+            var n2 = parseFloat(document.getElementById('Porcentagem').value);
+
+            var Aumento = (n1 + (n2/100) * n1);
+
+            document.getElementById('media').innerHTML = Aumento.toFixed(2);
+        }
+    </script>
+</body>
+</html>
